@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/> <!--damit Sonderzeichen angezeigt werden-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!--so wirds am Smartphone angezeigt, findet man auch in den Dokumenten oder Google -->
+
+<style>
+/*hover transition*/
+.hover__link {
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  color: green;
+}
+.hover__link:hover:after {
+  width: 57px;
+  left: 0;
+}
+.hover__link:after {
+  content: "";
+  height: 5px;
+  position: absolute;
+  background: green;
+  animation-delay: 1s;
+  animation: underline 4.2s linear infinite;
+  width: 0;
+}
+@keyframes underline {
+  0% {
+    transform: translate(0%);
+  }
+  50% {
+    transform: translate(100%);
+  }
+  75% {
+    transform: translate(50%);
+  }
+  100% {
+    transform: translate(0%);
+  }
+}
+
+
+/*line auto transition*/
+.line {
+  top: 45px;
+  width: 45px;
+  left: 10px;
+  height: 5px;
+  position: absolute;
+  background: green;
+  animation-delay: 1s;
+  animation: line 4.2s linear infinite;
+
+}
+@keyframes line {
+  0% {
+    transform: translate(0%);
+  }
+  50% {
+    transform: translate(100%);
+  }
+  75% {
+    transform: translate(50%);
+  }
+  100% {
+    transform: translate(0%);
+  }
+}
+
+
+/*hover Button*/
+.mouse-cursor-gradient-tracking {
+  position: relative;
+  background: #7983ff;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  border: none;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+}
+
+.mouse-cursor-gradient-tracking span {
+  position: relative;
+}
+
+.mouse-cursor-gradient-tracking::before {
+  --size: 0;
+  content: '';
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--size);
+  height: var(--size);
+  background: radial-gradient(circle closest-side, pink, transparent);
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease;
+}
+
+.mouse-cursor-gradient-tracking:hover::before {
+  --size: 200px;
+}
+/*Donut Spin*/
+
+@keyframes donut-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.donut {
+  display: inline-block;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #7983ff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: donut-spin 1.2s linear infinite;
+}
+/*image see only the mid*/
+.image {
+  background: #34495e;
+  border: 1px solid #34495e;
+  width: 200px;
+  height: 200px;
+}
+
+.image-contain {
+  object-fit: contain;
+  object-position: center;
+}
+
+.image-cover {
+  object-fit: cover;
+  object-position: right top;
+}
+/* Gradient Text*/
+.gradient-text {
+  background: -webkit-linear-gradient(pink, red);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+
+
+</style>
+</head>
+<body>
+
+<a href="#" class="hover__link">ich hover drüber</p>
+
+<button class="mouse-cursor-gradient-tracking"><span>Hover me</span></button>
+
+<div class="donut"></div>
+
+<div class="line"></div>
+
+<img class="image image-contain" src="https://picsum.photos/600/200" />
+<img class="image image-cover" src="https://picsum.photos/600/200" />
+
+<p class="gradient-text">Gradient text</p>
+
+<script>
+
+//hover button
+var btn = document.querySelector('.mouse-cursor-gradient-tracking')
+btn.onmousemove = function(e) {
+  var x = e.pageX - btn.offsetLeft - btn.offsetParent.offsetLeft
+  var y = e.pageY - btn.offsetTop - btn.offsetParent.offsetTop
+  btn.style.setProperty('--x', x + 'px')
+  btn.style.setProperty('--y', y + 'px')
+}
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!Doctype html>
+<html lang="de-DE">
+<head>
+    <meta charset="utf-8"/> <!--damit Sonderzeichen angezeigt werden-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!--so wirds am Smartphone angezeigt, findet man auch in den Dokumenten oder Google -->
+   
+    <title>Randomfarbe</title>
+    <style> 
+    
+    
+    </style>
+</head>
+<body>
+   
+    <h3 id="Farbe1">gewünschte farbe:</h3>
+    <h4 id="Color1">Farbkombination:</h4>
+    <h3 id="Farbe2">gewünschte farbe:</h3>
+    <h4 id="Color2">Farbkombination:</h4>
+    <h3 id="Farbe3">gewünschte farbe:</h3>
+    <h4 id="Color3">Farbkombination:</h4>
+    <h3 id="Farbe4">gewünschte farbe:</h3>
+    <h4 id="Color4">Farbkombination:</h4>
+    <h3 id="Farbe5">gewünschte farbe:</h3>
+    <h4 id="Color5">Farbkombination:</h4>
+    <h3 id="Farbe6">gewünschte farbe:</h3>
+    <h4 id="Color6">Farbkombination:</h4>
+
+    <button id="Button">Klick mich</button>
+
+    
+
+    <script>
+        document.getElementById("Button").onclick = function(){
+
+            rotZufall=Math.floor (Math.random()*256);
+            gruenZufall=Math.floor (Math.random()*256);
+            blauZufall=Math.floor (Math.random()*256);
+
+            document.getElementById("Farbe1").style.backgroundColor =  //erstellt random farbe
+            "rgb(" +  rotZufall + "," + gruenZufall + "," + blauZufall + ")";
+
+            document.getElementById("Color1").innerHTML=
+            "Die zufällige Hintergrundfarbe ist: " + "rgb(" +  rotZufall + "," + gruenZufall + "," + blauZufall + ")";
+
+            rotZufall1=Math.floor (Math.random()*256);
+            gruenZufall1=Math.floor (Math.random()*256);
+            blauZufall1=Math.floor (Math.random()*256);
+
+            document.getElementById("Farbe2").style.backgroundColor =  //erstellt random farbe
+            "rgb(" +  rotZufall1 + "," + gruenZufall1 + "," + blauZufall1 + ")";
+
+            document.getElementById("Color2").innerHTML=
+            "Die zufällige Hintergrundfarbe ist: " + "rgb(" +  rotZufall1 + "," + gruenZufall1 + "," + blauZufall1 + ")";
+
+            rotZufall3=Math.floor (Math.random()*256);
+            gruenZufall3=Math.floor (Math.random()*256);
+            blauZufall3=Math.floor (Math.random()*256);
+
+            document.getElementById("Farbe3").style.backgroundColor =  //erstellt random farbe
+            "rgb(" +  rotZufall3 + "," + gruenZufall3 + "," + blauZufall3 + ")";
+
+            document.getElementById("Color3").innerHTML=
+            "Die zufällige Hintergrundfarbe ist: " + "rgb(" +  rotZufall3 + "," + gruenZufall3 + "," + blauZufall3 + ")";
+
+            rotZufall4=Math.floor (Math.random()*256);
+            gruenZufall4=Math.floor (Math.random()*256);
+            blauZufall4=Math.floor (Math.random()*256);
+
+            document.getElementById("Farbe4").style.backgroundColor =  //erstellt random farbe
+            "rgb(" +  rotZufall4 + "," + gruenZufall4 + "," + blauZufall4 + ")";
+
+            document.getElementById("Color4").innerHTML=
+            "Die zufällige Hintergrundfarbe ist: " + "rgb(" +  rotZufall4 + "," + gruenZufall4 + "," + blauZufall4 + ")";
+
+            rotZufall5=Math.floor (Math.random()*256);
+            gruenZufall5=Math.floor (Math.random()*256);
+            blauZufall5=Math.floor (Math.random()*256);
+
+            document.getElementById("Farbe5").style.backgroundColor =  //erstellt random farbe
+            "rgb(" +  rotZufall5 + "," + gruenZufall5 + "," + blauZufall5 + ")";
+
+            document.getElementById("Color5").innerHTML=
+            "Die zufällige Hintergrundfarbe ist: " + "rgb(" +  rotZufall5 + "," + gruenZufall5 + "," + blauZufall5 + ")";
+
+            rotZufall6=Math.floor (Math.random()*256);
+            gruenZufall6=Math.floor (Math.random()*256);
+            blauZufall6=Math.floor (Math.random()*256);
+
+            document.getElementById("Farbe6").style.backgroundColor =  //erstellt random farbe
+            "rgb(" +  rotZufall6 + "," + gruenZufall6 + "," + blauZufall6 + ")";
+
+            document.getElementById("Color6").innerHTML=
+            "Die zufällige Hintergrundfarbe ist: " + "rgb(" +  rotZufall6 + "," + gruenZufall6 + "," + blauZufall6 + ")";
+
+        }
+         
+        
+
+    </script>
+    
+  
+
+
+</body>
+</html
