@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAGA,aAAU,CACR,KAAK,CCHC,IAAO,CDIb,SAAS,CAAE,IAAI,CACf,UAAU,CCLJ,IAAO,CDwCf,IAAI,CACF,UAAU,CCzCJ,IAAO,CD0Cb,MAAM,CAAE,cAAgB,CAExB,GAAG,CAED,KAAK,CAAE,IAAW,CAClB,UAAU,CAAE,MAAM,CAClB,SAAS,CAAE,aAAa,CAvC1B,qBAAqB,CAwCI,GAAG,CAvC5B,iBAAiB,CAuCQ,GAAG,CAtC5B,gBAAgB,CAsCS,GAAG,CArC5B,aAAa,CAqCY,GAAG,CAG9B,CAAE,CACA,KAAK,CCrDC,IAAO",
+"sources": ["../../../src/assets/sass/totourial.scss","../../../src/assets/sass/partials/_color.scss"],
+"names": [],
+"file": "totourial.min.css"
+}

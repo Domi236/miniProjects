@@ -1,0 +1,143 @@
+@import "partials/generalNav";
+
+html {
+    font-family: $font-family;
+    font-size: 14px;
+    scroll-behavior: smooth; /*makes the anker jump to a smooth way to go*/
+}
+body {
+  margin: $value;
+  background-color: $defaultColor;
+  overflow-x: hidden;
+}
+.header {
+  @include distance(0);
+  z-index: $onTop;
+  margin-top: 5px;
+  margin-bottom: $value;
+}
+.header__menu {
+  display: flex;
+  justify-content: center;
+  padding: 0 0 20px;
+  margin: $value;
+  z-index: $onTop;
+  @media (max-width: 1024px) {
+    visibility: collapse;
+    height: $value;
+    width: $value;
+}}
+.menu__toggle {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  display: block;
+  margin-top: -5px;
+  margin-right: 10px;
+  border-radius: 10px;
+  z-index: $onTop;
+@media (min-width: 1025px) {
+  display: none;
+}
+@media (max-width: 1024px) {
+  position: absolute;
+  right: $value;
+  top: $value;
+  margin-top: 10px;
+  margin-right: 10px;
+}}
+input[type=checkbox] {
+  display: none;
+}
+.menu__bar {
+  width: 80px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: #666;
+  display: block;
+  margin: auto;
+  transition: background-color .25s ease-in-out;
+  z-index: $onTop;
+@media (max-width: 440px) {
+  position: relative;
+  right: 20px;
+  margin-right: 30px;
+}}
+.menu__bar::after,:before {
+  content:"";
+  position: absolute;
+  height: 100%;
+  left: $value;
+  background-color: inherit;
+  transition: width .25s ease-in-out;
+}
+.menu__bar::after {
+  width: 40%;
+  top: 300%;
+}
+.menu__bar::before{
+  width: 60%;
+  bottom: 300%;
+}
+.menu__toggle:hover .menu__bar {
+  background-color: black;
+&:before:after {
+  width: 100%;
+}}
+
+.menu__toggler--nav:checked ~ .menu__toggle--nav .menu__bar {
+  background: transparent;
+  transition: blackground .25s ease-in-out;
+&:after {
+  transform: rotate(45deg);
+  @extend .beforeAndAfter;
+}
+&:before {
+  transform: rotate(-45deg);
+  @extend .beforeAndAfter;
+}}
+:checked + .menu__toggle > .menu__bar::before:after { /*speaks always to teh last one*/
+width: 100%;
+}
+:checked ~ .header__menu {
+  visibility: visible;
+  height: auto;
+  position: absolute;
+  width: 40vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto 30vw auto 30vw;
+  z-index: 3;
+  top: 20vh;
+  border: none;
+&:before {
+  content:"";
+  position: fixed;
+  @include distance(0);
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: -1;
+}}
+.menu__link {
+  text-decoration: none;
+  font-weight: bold;
+  color: $color;
+&:hover {
+  text-decoration: underline $line;
+}}
+.menu__item {
+  @extend .h1_nav;
+  list-style-type: none;
+  padding: 15px;
+  flex-basis: 100%;/*every item takes 100% of the availlable place*/
+  text-align: center;
+  &:hover{
+    cursor:pointer;
+  }
+   @media (max-width: 1024px) {
+    flex-grow: 1;
+  }
+}

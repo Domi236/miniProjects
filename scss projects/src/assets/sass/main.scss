@@ -1,0 +1,22 @@
+$red: #c00;
+$colorRed: $red;
+
+$gutter: 20px;
+
+@mixin color($color: rgba($red,.5)) {
+  color: $color;
+  border-color: $color;
+  &:before {
+    background-color: $color;
+  }
+}
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}
+
+.foo {
+  width: 20rem + strip-units($gutter/16);
+}
+
+$defaultColor: $colorRed;
+@import "partials/general";

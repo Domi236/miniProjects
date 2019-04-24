@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,IAAI,CACF,UAAU,CAAE,OAAO,CAEjB,QAAQ,CACN,KAAK,CAAE,KAAK",
+"sources": ["../sass/totourial.scss"],
+"names": [],
+"file": "totourial.css"
+}

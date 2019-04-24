@@ -1,0 +1,24 @@
+$defaultColor: grey;
+$font-family: Verdana,sans-serif, serif;
+$value: 0;
+$color: #fff;
+$line: orange;
+$onTop: 10;
+
+
+.h1_nav {
+  color: $color;
+  font-size: 35px;
+  text-shadow: 8px 5px 5px rgba(0, 0, 0, 1);
+}
+@mixin distance($value) {
+  top: $value;
+  left: $value;
+  right: $value;
+  bottom: $value;
+}
+.beforeAndAfter {
+  background-color: $color;
+  width: 100%;
+  top: $value;
+}

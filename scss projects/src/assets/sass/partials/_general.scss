@@ -1,0 +1,62 @@
+$defaultColor: green !default; //das !default sagt aus das diese farbe überschrieben werden kann
+
+body {
+  color: $defaultColor;
+}
+.menu__item {
+  &:nth-child(1){
+    color: red;
+  }
+  &:nth-child(2){
+      color: yellow;
+  }
+  &:nth-child(3){
+      color: blue;
+  }
+  &:nth-child(4){
+      color: green;
+  }
+
+  .menu--main & {
+    color: white;
+  }
+}
+
+h1 {
+  &:before {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 100%;
+  }
+  @include color(#cc0);
+
+  @media (min-width:320px) {
+    display: none;
+  }
+}
+
+// BLOCK __ ELEMENT -- MODIFIER
+
+.tasse {
+  color: white;
+  background: red;
+  &:hover{
+    color: brown;
+  }
+  .liquid {
+    background-color: brown;
+  }
+}
+
+.tasse__liquid {}
+
+.tasse--coffee {
+  width: 300px;
+  height: 100px;
+}
+
+.tasse--nescafe {
+  width: 100px;
+  height: 300px;
+}

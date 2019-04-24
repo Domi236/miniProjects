@@ -1,0 +1,39 @@
+
+<!Doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/> <!--damit Sonderzeichen angezeigt werden-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!--so wirds am Smartphone angezeigt, findet man auch in den Dokumenten oder Google -->
+    <link rel="stylesheet" href="dist/assets/css/navBurger.css">
+    <title>Burger Nav SCSS</title>
+</head>
+<body>
+  <header class="header">
+      <nav class="header__nav">
+        <input class="menu__toggler menu__toggler--nav" type="checkbox" name="toggler" id="checkbox_toggle">
+        <label for="checkbox_toggle" class="menu__toggle menu__toggle--nav"><span class="menu__bar"></span></label>
+          <ul class="header__menu menu" >
+            <li class="menu__item"><a class="menu__link" id="grey__div" href="#home">Home</a></li> <!--target="_blank" opens the link in a new tab-->
+            <li class="menu__item"><a class="menu__link" id="blue__div" href="#memes">Memes</a></li>
+            <li class="menu__item"><a class="menu__link" id="green__div" href="#loveMemes">love Memes</a></li>
+            <li class="menu__item"><a class="menu__link" id="red__div" href="#memeWar">meme War</a></li> <!--<a href="#">Skills</a> the # is using as a placeholder-->
+            <li class="menu__item"><a class="menu__link" id="purple__div" href="#memeGifs">meme Gifs</a></li>
+            <li class="menu__item"><a class="menu__link" id="orange__div" href="#playground">Playground</a></li>
+          </ul>
+        </nav>
+  </header>
+
+  <script>
+    function closeMenuToggle() {
+      var $element = document.getElementById('checkbox_toggle');
+      $element.checked = false;
+    }
+    var $$menuLinks =  Array.prototype.slice.call(document.querySelectorAll('.menu__link'));
+    for (var i = 0; i < $$menuLinks.length; ++i) {
+      $$menuLinks[i].addEventListener('click', closeMenuToggle);
+    }
+
+  </script>
+  <script src="Javascript\imgSlider.js"></script>
+</body>
+</html>
