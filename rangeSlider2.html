@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<style>
+</style>
+<body>
+
+<input class="range" type="range" min="100" max="500" value="50" step="2" onChange="sliderChange(this.value)" />
+<br /><br />
+Slider Value = <span id="sliderStatus">50</span>
+
+<script>
+    function sliderChange(value) {
+        document.getElementById('sliderStatus').innerHTML = value;
+    }
+</script>
+</body>
+</html>

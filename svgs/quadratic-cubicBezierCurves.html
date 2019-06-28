@@ -3,17 +3,15 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
 </head>
 <style>
-    html {
-        width: 90%;
-        height: 90%;
-    }
+html {
+  width: 80%;
+  height: 80%;
+}
 
 </style>
-<body id="content">
- <!--arrow path-->
+<body>
     <svg viewBox="0 0 100 100" style="border: green solid;"> 
         <path style="stroke: green; stroke-width: .2" d="M10 0 V100" /> 
         <path style="stroke: green; stroke-width: .2" d="M20 0 V100" /> 
@@ -34,28 +32,27 @@
         <path style="stroke: green; stroke-width: .2" d="M0 70 H100" /> 
         <path style="stroke: green; stroke-width: .2" d="M0 80 H100" /> 
         <path style="stroke: green; stroke-width: .2" d="M0 90 H100" />
-<!-- 
-        <path style="stroke: green; stroke-width: 1" fill="green" d="M20 10 H50 V0 L80 20 L50 40 V30 H20 Z" />
 
-        <path style="stroke: green; stroke-width: 1" fill="green" d="M20 60 h30 v-10 130 20 l-30 20 v-10 h-30 z" /> -->
+        <!-- <path stroke="maroon" stroke-width="1" fill="none" d="M20 50 Q30 30 40 50 T60 50 T80 50" /> -->
+        <!-- <path stroke="maroon" stroke-width="1" fill="none" d="M20 50 Q30 30 50 20" /> -->
 
-        <path style="stroke: green; stroke-width: 0" fill="green" d="M20 20 H30 V30 H20 Z"/>
-        <path style="stroke: maroon; stroke-width: 0" fill="maroon" d="M10 10 H20 V20 H10 Z"/>
+        <!-- wave -->
+        <!-- <path stroke="maroon" stroke-width="1" fill="none" d="M20 50 C40 30 50 50 80 50"/> -->
+
+        <!-- 2 ways t o write the same curve -->
+        <!-- <path stroke="blue" stroke-width="1" fill="none" d="M20 70 Q50 40 80 70"/>
+        <path stroke="maroon" stroke-width="1" fill="none" d="M20 50 C40 30 60 30 80 50"/> -->
+
+        <!-- mountains -->
+        <path stroke="maroon" stroke-width="1" fill="none" d="M10 50 C20 30, 20 30, 30 50, S40 70, 50 50, S60 30, 70 50"/> 
+
+        <!--Q stands for Cubic Bezier curves the first one is how and where you want to be, in the second you write the end of the curve-->
+        <!--T is an shorthand for Cubic Bezier curves-->
     </svg>
-            
-    <!--stroke-width: 3; = lines thick
-        d = data => first point in x | second point in y
-        M = MoveTo(startpoint) [2 values], L = lineTo [2 values], H = horizontal lineTo [1 value], V = vertical lineTo [1 value]-->
-        <!-- L,H,V,Z these are absolute values
-        l,h,v,z these are realtive values -->
-
-        <!-- <svg viewBox="0 0 100 100" style="border:green solid"><path d="M10 0v100M20 0v100M30 0v100M40 0v100M50 0v100M60 0v100M70 0v100M80 0v100M90 0v100M0 10h100M0 20h100M0 30h100M0 40h100M0 50h100M0 60h100M0 70h100M0 80h100M0 90h100"/><path fill="green" stroke="green" d="M20 10h30V0l30 20-30 20V30H20zM20 60h30V50v150l-30 20v-10h-30z"/></svg> -->
 
 
-<script>
 
 
-</script>
 
 </body>
 </html>
